@@ -234,6 +234,7 @@ for (let title in KDT) {
   root.children[2].children[1].children[number].children[0].style.borderRight = "0.5px solid red"
   root.children[2].children[1].children[number].children[0].textContent = title;
   FontStyle(root.children[2].children[1].children[number].children[0], "", "17px", "center")
+  root.children[2].children[1].children[number].children[0].style.  wordWrap = "break-word";
 
   CreateDoc("div", root.children[2].children[1].children[number]);
   CommonStyle(root.children[2].children[1].children[number].children[1], "70%")
