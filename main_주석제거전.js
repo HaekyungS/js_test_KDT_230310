@@ -22,7 +22,7 @@ for (i = 0; i < a_key.length; i++) {
 
 };
 
-// console.log(a_key_key)
+console.log(a_key_key)
 // console.log(a_key[0])
 // 담긴 정보 확인.
 
@@ -32,6 +32,16 @@ for (i = 0; i < a_key.length; i++) {
 
 // 처음엔 const로 선언. 내부 데이터가 추가되는건 문제 없는 줄 알았는데 const 의 경우 변하지 못하는 변수이기 때문에 아래 for 로 데이터를 추가하면 문법 오류 발생. let 이 적절함.
 
+// 하단은 객체에 접근하다 오류난 부분
+// for(let a_key in a){
+//   console.log(a[a_key])
+//   // a[a_key] 를 통해 a객체 안에 key값들이 a_key에 배열로 담김을 확인.
+
+//   a_key_value = a[a_key];
+//   //a_key_value 에 a의 key별 value 를 담음
+// }
+// console.log(a_key_value)
+// 배열을 담고 그 배열을 응용하는 것에 막힘이 있었음. 위 과정으로 복잡하지만 접근함.
 
 // body에 viewport 단위로 스타일설정
 CommonStyle(document.body, "100vw", "100vh");
@@ -59,8 +69,8 @@ root.children[0].addEventListener("click", function () {
 // nav 부분 생성 및 스타일 적용
 CreateDoc("nav", root);
 CommonStyle(root.children[1], "100%", "5%", a_key[2][a_key_key[2][0]][1]);
-DisplayFlex(root.children[1], "inline-block");
-root.children[1].style.position = "fixed"
+DisplayFlex(root.children[1],"inline-block");
+root.children[1].style.position="fixed"
 root.children[1].innerHTML = "<p>" + a_key_key[1][0] + "</p>"
 CommonStyle(root.children[1].children[0], "100%", "100%");
 FontStyle(root.children[1].children[0], "", "20px", "center");
@@ -69,29 +79,17 @@ FontStyle(root.children[1].children[0], "", "20px", "center");
 // subject 위치 확인
 
 CreateDoc("div", root.children[1]);
-const nav_category = root.children[1].children[1];
-nav_category.style.cssText = "display:none;"
+root.children[1].children[1].style.cssText = "display:none;"
 
 // 하단으로 내려올 과목 갯수만큼의 div 생성
 for (i = 0; i < a_key[1][a_key_key[1]].length; i++) {
   CreateDoc("div", root.children[1].children[1])
-  CommonStyle(nav_category.children[i], "100%", "50%", a_key[2][a_key_key[2][0]][1])
-  FontStyle(nav_category.children[i], "", "18px", "center")
+  CommonStyle(root.children[1].children[1].children[i], "100%", "50%", a_key[2][a_key_key[2][0]][1])
+  FontStyle(root.children[1].children[1].children[i], "", "18px", "center")
 
-  nav_category.children[i].textContent = a_key[1][a_key_key[1]][i];
+  root.children[1].children[1].children[i].textContent = a_key[1][a_key_key[1]][i];
 
-  // 마우스 커서가 올라가면 글씨가 커지게.
-  nav_category.children[i].addEventListener("mouseover", (event) => {
-    event.target.style.transform = "scale(1.2)";
-  })
-
-  // 마우스 커서가 빠지면 글씨 원래대로.
-  nav_category.children[i].addEventListener("mouseout", (event) => {
-    event.target.style.transform = "";
-  })
-
-  // 카테고리 누르면 랜덤 4명 학생 뽑음
-  nav_category.children[i].addEventListener("click", function () {
+  root.children[1].children[1].children[i].addEventListener("click", function () {
     root.children[2].children[0].children[0].textContent = this.textContent;
 
     let student = [];

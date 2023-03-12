@@ -1,10 +1,3 @@
-const KDT = {
-  "프로그램 이름": "K-Disital Training",
-  "프로그램 개요": "기업이 요구하는 프레임워크를 활용한 풀스택 개발자(NODE, ECMAscript) 양성과정",
-  "강 사": "공욱재",
-  "학생수": "25명",
-  "학원명": "그린컴퓨터아트학원 대전둔산"
-}
 
 
 const Img = {
@@ -13,7 +6,6 @@ const Img = {
   "슬랙": "https://kongukjae.slack.com/archives/C04PRUMAGS0",
   "노션": "https://kongukjae.notion.site/6be9e1e0b82a410da66c49dae3400a82?v=83576d4636024993a730f806d51eeb5a"
 }
-
 
 const studentList = [
   "강지민",
@@ -43,6 +35,42 @@ const studentList = [
   "허진",
 ];
 
+// const studentList = {
+//   "강지민":"url()",
+//   "곽윤호":"url()",
+//   "권예준":"url()",
+//   "김동주":"url()",
+//   "김은아":"url()",
+//   "김종윤":"url()",
+//   "김지섭":"url()",
+//   "김형진":"url()",
+//   "노수민":"url()",
+//   "류은이":"url()",
+//   "박달재":"url()",
+//   "박수연":"url()",
+//   "박준형":"url()",
+//   "성해경":"url()",
+//   "이경택":"url()",
+//   "이세민":"url()",
+//   "이재권":"url()",
+//   "임지성":"url()",
+//   "장루빈":"url()",
+//   "정성철":"url()",
+//   "정지은":"url()",
+//   "정희은":"url()",
+//   "최대건":"url()",
+//   "한유진":"url()",
+//   "허진":"url()"
+// };
+
+
+const KDT = {
+  "프로그램 이름": "K-Disital Training",
+  "프로그램 개요": "기업이 요구하는 프레임워크를 활용한 풀스택 개발자(NODE, ECMAscript) 양성과정",
+  "강 사": "공욱재",
+  "학생수": studentList.length + "명",
+  "학원명": "그린컴퓨터아트학원 대전둔산"
+}
 
 
 // element 생성하는 함수
@@ -66,14 +94,15 @@ function CommonStyle(Tag, Width, Height, BackgroundColor) {
 
 
 // Display 적용 함수
-function DisplayFlex(Tag, Display, Direc,Justify) {
+function DisplayFlex(Tag, Display, Direc, Justify) {
   Tag.style.display = Display
   if (Display === "flex") {
     Tag.style.display = "flex";
     Tag.style.alignItems = "center"
     Tag.style.flexDirection = Direc
-    if(Justify === undefined){
-      Tag.style.justifyContent = "center";}
+    if (Justify === undefined) {
+      Tag.style.justifyContent = "center";
+    }
     if (Direc === undefined)
       Tag.style.flexDirection = "column";
 
