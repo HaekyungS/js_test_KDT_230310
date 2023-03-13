@@ -100,7 +100,7 @@ for (i = 0; i < a_key[1][a_key_key[1]].length; i++) {
     for (i = 0; i < 4; i++) {
 
       //랜덤숫자로 한명의 학생을 뽑음.
-      let studentname = studentList[Math.floor(Math.random() * studentList.length)]
+      let studentname = studentnameList[Math.floor(Math.random() * studentnameList.length)]
 
       // 같은 학생이 중복으로 나오는 것을 방지하여 해당 학생이 배열에 포함된 사람인지 확인.
       if (student.indexOf(studentname) === -1) {
@@ -112,6 +112,9 @@ for (i = 0; i < a_key[1][a_key_key[1]].length; i++) {
         //배열에 이미 있는 사람은 담지 않고 새로 뽑기
         i--;
       }
+      // studentname.addEventListener("click", function () {
+      //   window.open(studentList[studentname], "_blank");
+      // })
     }
     console.log(student)
     // 콘솔로 중복이 없는지 재확인
@@ -237,7 +240,7 @@ for (let title in KDT) {
   CreateDoc("div", root.children[2].children[1].children[number])
   CommonStyle(root.children[2].children[1].children[number].children[0], "25%")
   root.children[2].children[1].children[number].children[0].style.borderRight = "0.5px solid red"
-  root.children[2].children[1].children[number].children[0].innerHTML = title.substring(0, 4) + '<br>' + title.substring(5,);
+  root.children[2].children[1].children[number].children[0].innerHTML = title.substring(0, 4) + '<br>' + title.substring(5);
 
   FontStyle(root.children[2].children[1].children[number].children[0], "", "17px", "center")
 
