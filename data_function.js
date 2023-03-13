@@ -67,9 +67,7 @@ let studentnameList=[];
 let count=0;
 
 for(studentnameList[count] in studentList){
-  studentnameList[count].addEventListener("click",function(){
-    window.open(studentList[studentnameList[count]], "_blank")
-  })
+  // console.log(studentList[studentnameList[count]])
   count ++;
 }
 

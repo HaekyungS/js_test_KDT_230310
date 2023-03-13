@@ -112,9 +112,7 @@ for (i = 0; i < a_key[1][a_key_key[1]].length; i++) {
         //배열에 이미 있는 사람은 담지 않고 새로 뽑기
         i--;
       }
-      // studentname.addEventListener("click", function () {
-      //   window.open(studentList[studentname], "_blank");
-      // })
+      
     }
     console.log(student)
     // 콘솔로 중복이 없는지 재확인
