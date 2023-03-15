@@ -138,12 +138,13 @@ for (i = 0; i < a_key[1][a_key_key[1]].length; i++) {
       }
       else if (i === 4) {
         root.children[2].children[1].children[i].children[0].innerHTML = a_key_key[0][i].substring(0, 4) + "<br>" + a_key_key[0][i].substring(4,)
-        root.children[2].children[1].children[i].children[1].textContent = student[1] + " ," + student[2] + " ," + student[3]
+        root.children[2].children[1].children[i].children[1].innerHTML = `<a>${student[1]}</a>, <a>${student[2]}</a>, <a>${student[3]}</a>`;
       }
       else {
         root.children[2].children[1].children[i].children[0].innerHTML = a_key_key[0][i].substring(0, 4) + "<br>" + a_key_key[0][i].substring(4,)
         root.children[2].children[1].children[i].children[1].textContent = a_key[0][a_key_key[0][i]];
       }
+
     }
     // 보완할 점 : 강사님 데이터에서 가져온 단어가 줄바꿈이 이뤄지지않고 영역을 넘어가버림. -> 해결 ( 4번째글자 이후로 줄바꿈 )
 

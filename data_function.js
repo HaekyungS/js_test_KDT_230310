@@ -67,7 +67,6 @@ let studentnameList=[];
 let count=0;
 
 for(studentnameList[count] in studentList){
-  // console.log(studentList[studentnameList[count]])
   count ++;
 }
 

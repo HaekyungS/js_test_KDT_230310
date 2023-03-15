@@ -13,8 +13,9 @@
     let a = "hello"
     root.textContent = a
     let Switch = "on";
-    root.onclick = () =>{
+    root.onclick = (event) =>{
       if(Switch === "on"){
+        console.log(event)
         a = "bye"
         root.textContent = a;
         Switch = "off"
